@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     
     //Vars
     var btnSound: AVAudioPlayer!
-    var OpSelected: Operation = .empty
+    var OpSelected: Operation = Operation.empty
     
     var Output:Double = 0.0
     var typedNumbers:String = ""
@@ -81,10 +81,29 @@ class ViewController: UIViewController {
     
     func processOperation(op: Operation) {
         if OpSelected != Operation.empty {
+            if typedNumbers != "" {
+                switch OpSelected {
+                case Operation.add:
+                    OutputLbl.text = "\(Double(lastTypedNum)! + Double(typedNumbers)!)"
+                case Operation.subtract:
+                    OutputLbl.text = "\(Double(lastTypedNum)! - Double(typedNumbers)!)"
+                case Operation.multiply:
+                    OutputLbl.text = "\(Double(lastTypedNum)! * Double(typedNumbers)!)"
+                case Operation.divide:
+                    OutputLbl.text = "\(Double(lastTypedNum)! / Double(typedNumbers)!)"
+                default:
+                    break
+                }
+            
+                typedNumbers = ""
+                lastTypedNum = OutputLbl.text!
+                OpSelected = op
+            }
+            
+        } else {
             OpSelected = op
             lastTypedNum = typedNumbers
-        } else {
-            
+            typedNumbers = ""
         }
         
         

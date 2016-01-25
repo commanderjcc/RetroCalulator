@@ -285,7 +285,7 @@
                                     <constraint firstItem="nG6-7B-wug" firstAttribute="height" secondItem="IQF-fY-D56" secondAttribute="height" id="ypi-vR-LgS"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDg-8f-FT2" userLabel="output">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="dDg-8f-FT2" userLabel="output">
                                 <rect key="frame" x="168" y="58" width="264" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="264" id="SmM-6P-QRz">
@@ -299,9 +299,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="40"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="Minecraft" family="Minecraft" pointSize="20"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
