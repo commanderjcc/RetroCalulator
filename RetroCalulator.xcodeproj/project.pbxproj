@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430F63D91C55A1DE000F3DDB /* Minecraft-Font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 430F63DB1C55A1DE000F3DDB /* Minecraft-Font.ttf */; };
 		432FE2F81C55145B008E80CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432FE2F71C55145B008E80CF /* AppDelegate.swift */; };
 		432FE2FA1C55145B008E80CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 432FE2F91C55145B008E80CF /* ViewController.swift */; };
 		432FE2FD1C55145B008E80CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432FE2FB1C55145B008E80CF /* Main.storyboard */; };
 		432FE2FF1C55145B008E80CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 432FE2FE1C55145B008E80CF /* Assets.xcassets */; };
 		432FE3021C55145B008E80CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 432FE3001C55145B008E80CF /* LaunchScreen.storyboard */; };
-		432FE30A1C553169008E80CF /* Minecraft.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 432FE3091C553169008E80CF /* Minecraft.ttf */; };
+		434AEBD81C55520500B0FB6A /* btn.wav in Resources */ = {isa = PBXBuildFile; fileRef = 434AEBD71C55520500B0FB6A /* btn.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430F63DA1C55A1DE000F3DDB /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = "en.lproj/Minecraft-Font.ttf"; sourceTree = "<group>"; };
+		430F63DC1C55A1E2000F3DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file; name = Base; path = "Base.lproj/Minecraft-Font.ttf"; sourceTree = "<group>"; };
 		432FE2F41C55145B008E80CF /* RetroCalulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroCalulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		432FE2F71C55145B008E80CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		432FE2F91C55145B008E80CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -23,7 +26,7 @@
 		432FE2FE1C55145B008E80CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		432FE3011C55145B008E80CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		432FE3031C55145B008E80CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		432FE3091C553169008E80CF /* Minecraft.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Minecraft.ttf; sourceTree = "<group>"; };
+		434AEBD71C55520500B0FB6A /* btn.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = btn.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +59,8 @@
 		432FE2F61C55145B008E80CF /* RetroCalulator */ = {
 			isa = PBXGroup;
 			children = (
-				432FE3091C553169008E80CF /* Minecraft.ttf */,
+				430F63DB1C55A1DE000F3DDB /* Minecraft-Font.ttf */,
+				434AEBD71C55520500B0FB6A /* btn.wav */,
 				432FE2F71C55145B008E80CF /* AppDelegate.swift */,
 				432FE2F91C55145B008E80CF /* ViewController.swift */,
 				432FE2FB1C55145B008E80CF /* Main.storyboard */,
@@ -126,9 +130,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				430F63D91C55A1DE000F3DDB /* Minecraft-Font.ttf in Resources */,
+				434AEBD81C55520500B0FB6A /* btn.wav in Resources */,
 				432FE3021C55145B008E80CF /* LaunchScreen.storyboard in Resources */,
 				432FE2FF1C55145B008E80CF /* Assets.xcassets in Resources */,
-				432FE30A1C553169008E80CF /* Minecraft.ttf in Resources */,
 				432FE2FD1C55145B008E80CF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,6 +153,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		430F63DB1C55A1DE000F3DDB /* Minecraft-Font.ttf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				430F63DA1C55A1DE000F3DDB /* en */,
+				430F63DC1C55A1E2000F3DDB /* Base */,
+			);
+			name = "Minecraft-Font.ttf";
+			sourceTree = "<group>";
+		};
 		432FE2FB1C55145B008E80CF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,6 +305,7 @@
 				432FE3081C55145B008E80CF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

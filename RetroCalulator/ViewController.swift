@@ -7,57 +7,88 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
+    enum Operation:String {
+        case add = "+"
+        case subtract = "-"
+        case multiply = "*"
+        case divide = "/"
+        case equals = "="
+        case empty = ""
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        let path = NSBundle.mainBundle().pathForResource("btn", ofType: "wav")
+        let soundURL = NSURL(fileURLWithPath: path!)
+        do {
+            try btnSound = AVAudioPlayer(contentsOfURL: soundURL)
+            btnSound.prepareToPlay()
+        } catch let err as NSError {
+            print(err.debugDescription)
+        }
     }
-
+    
+    
+    
     //Outlets
     @IBOutlet weak var OutputLbl: UILabel!
     
     //Vars
+    var btnSound: AVAudioPlayer!
+    var OpSelected: Operation = .empty
+    
     var Output:Double = 0.0
-    var OpSelected:String?
-    var LastOutput:Double = 0.0
+    var typedNumbers:String = ""
+    var lastTypedNum:String = ""
     
-    //Number Actions
-    @IBAction func Pressed0(sender: AnyObject) {
-    }
-    @IBAction func Pressed1(sender: AnyObject) {
-    }
-    @IBAction func Pressed2(sender: AnyObject) {
-    }
-    @IBAction func Pressed3(sender: AnyObject) {
-    }
-    @IBAction func Pressed4(sender: AnyObject) {
-    }
-    @IBAction func Pressed5(sender: AnyObject) {
-    }
-    @IBAction func Pressed6(sender: AnyObject) {
-    }
-    @IBAction func Pressed7(sender: AnyObject) {
-    }
-    @IBAction func Pressed8(sender: AnyObject) {
-    }
-    @IBAction func Pressed9(sender: AnyObject) {
+    //Actions
+    @IBAction func btnPressed(btn: UIButton!) {
+        btnSound.play()
+        
+        if btn.tag < 10 {
+            typedNumbers += "\(btn.tag)"
+            OutputLbl.text = typedNumbers
+        }
+        
     }
     
-    //Operator Actions
-    @IBAction func add(sender: AnyObject) {
+    @IBAction func Add(sender: AnyObject) {
+        processOperation(.add)
     }
-    @IBAction func subtract(sender: AnyObject) {
+    
+    @IBAction func Subtract(sender: AnyObject) {
+        processOperation(.subtract)
     }
-    @IBAction func multiply(sender: AnyObject) {
+    
+    @IBAction func Multiply(sender: AnyObject) {
+        processOperation(.multiply)
     }
-    @IBAction func divide(sender: AnyObject) {
+    
+    @IBAction func Divide(sender: AnyObject) {
+        processOperation(.divide)
     }
+    
+    @IBAction func Equals(sender: AnyObject) {
+        processOperation(.equals)
+    }
+    
     
     //Functions
     
-    
+    func processOperation(op: Operation) {
+        if OpSelected != Operation.empty {
+            OpSelected = op
+            lastTypedNum = typedNumbers
+        } else {
+            
+        }
+        
+        
+    }
 
 
 }
