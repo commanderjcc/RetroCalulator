@@ -6,7 +6,7 @@
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Minecraft-Font.ttf">
+        <mutableArray key="Minecraft.ttf">
             <string>Minecraft</string>
         </mutableArray>
     </customFonts>
